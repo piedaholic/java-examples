@@ -12,6 +12,7 @@ public class AdjacencyList {
 		int V;
 		LinkedList<Integer> adjListArray[];
 
+		@SuppressWarnings("unchecked")
 		// constructor
 		Graph(int V) {
 			this.V = V;
