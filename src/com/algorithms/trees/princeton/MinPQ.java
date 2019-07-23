@@ -58,6 +58,7 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param initCapacity
      *            the initial capacity of this priority queue
      */
+    @SuppressWarnings("unchecked")
     public MinPQ(int initCapacity) {
 	pq = (Key[]) new Object[initCapacity + 1];
 	n = 0;
