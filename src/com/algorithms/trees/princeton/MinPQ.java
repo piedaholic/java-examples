@@ -151,6 +151,7 @@ public class MinPQ<Key> implements Iterable<Key> {
     // helper function to double the size of the heap array
     private void resize(int capacity) {
 	assert capacity > n;
+	@SuppressWarnings("unchecked")
 	Key[] temp = (Key[]) new Object[capacity];
 	for (int i = 1; i <= n; i++) {
 	    temp[i] = pq[i];
