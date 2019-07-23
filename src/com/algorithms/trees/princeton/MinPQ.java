@@ -106,6 +106,7 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param keys
      *            the array of keys
      */
+    @SuppressWarnings("unchecked")
     public MinPQ(Key[] keys) {
 	n = keys.length;
 	pq = (Key[]) new Object[keys.length + 1];
