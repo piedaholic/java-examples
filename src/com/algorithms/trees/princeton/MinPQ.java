@@ -222,6 +222,7 @@ public class MinPQ<Key> implements Iterable<Key> {
     /***************************************************************************
      * Helper functions for compares and swaps.
      ***************************************************************************/
+    @SuppressWarnings("unchecked")
     private boolean greater(int i, int j) {
 	if (comparator == null) {
 	    return ((Comparable<Key>) pq[i]).compareTo(pq[j]) > 0;
