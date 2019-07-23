@@ -68,6 +68,7 @@ public class EdgeWeightedGraph {
      * @throws IllegalArgumentException
      *             if {@code V < 0}
      */
+    @SuppressWarnings("unchecked")
     public EdgeWeightedGraph(int V) {
 	if (V < 0)
 	    throw new IllegalArgumentException("Number of vertices must be nonnegative");
