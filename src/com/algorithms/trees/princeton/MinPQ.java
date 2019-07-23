@@ -80,6 +80,7 @@ public class MinPQ<Key> implements Iterable<Key> {
      * @param comparator
      *            the order in which to compare the keys
      */
+    @SuppressWarnings("unchecked")
     public MinPQ(int initCapacity, Comparator<Key> comparator) {
 	this.comparator = comparator;
 	pq = (Key[]) new Object[initCapacity + 1];
