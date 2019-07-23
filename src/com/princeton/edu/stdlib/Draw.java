@@ -1397,6 +1397,7 @@ public final class Draw implements ActionListener, MouseListener, MouseMotionLis
     *  For improved resolution on Mac Retina displays.
     ***************************************************************************/
 
+    @SuppressWarnings("serial")
     private static class RetinaImageIcon extends ImageIcon {
     
         public RetinaImageIcon(Image image) {
