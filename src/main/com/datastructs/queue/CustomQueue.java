@@ -7,7 +7,7 @@ public class CustomQueue<T> {
     Stack<T> oldestOnTop = new Stack<T>();
 
     private void stackShift() {
-	if (oldestOnTop == null) {
+	if (oldestOnTop.isEmpty()) {
 	    while (!newestOnTop.isEmpty()) {
 		oldestOnTop.push(newestOnTop.pop());
 	    }
@@ -16,6 +16,7 @@ public class CustomQueue<T> {
 
     public void enqueue(T item) {
 	newestOnTop.push(item);
+	stackShift();
     }
 
     public T dequeue() {
@@ -26,5 +27,18 @@ public class CustomQueue<T> {
     public T peek() {
 	stackShift();
 	return oldestOnTop.peek();
+    }
+
+    public boolean isEmpty() {
+	return oldestOnTop.isEmpty();
+    }
+
+    public void clear() {
+	while (!newestOnTop.isEmpty()) {
+	    newestOnTop.pop();
+	}
+	while (!oldestOnTop.isEmpty()) {
+	    oldestOnTop.pop();
+	}
     }
 }
