@@ -9,7 +9,7 @@
 	<description>Implementations in Java</description>
 	<build>
 		<sourceDirectory>src/main</sourceDirectory>
-		<testSourceDirectory>test</testSourceDirectory>
+		<testSourceDirectory>src/test</testSourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main</directory>
@@ -35,6 +35,12 @@
 			<groupId>gov.nist.math</groupId>
 			<artifactId>jama</artifactId>
 			<version>1.0.3</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
