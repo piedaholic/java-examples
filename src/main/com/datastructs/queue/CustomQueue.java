@@ -30,7 +30,7 @@ public class CustomQueue<T> {
     }
 
     public boolean isEmpty() {
-	return oldestOnTop.isEmpty();
+	return newestOnTop.isEmpty() && oldestOnTop.isEmpty();
     }
 
     public void clear() {
