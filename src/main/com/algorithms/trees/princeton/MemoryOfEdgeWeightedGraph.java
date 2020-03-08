@@ -11,7 +11,7 @@ package com.algorithms.trees.princeton;
  *
  ******************************************************************************/
 
-import com.javamex.classmexer.MemoryUtil;
+//import com.javamex.classmexer.MemoryUtil;
 import com.princeton.edu.stdlib.MultipleLinearRegression;
 import com.princeton.edu.stdlib.StdOut;
 import com.princeton.edu.stdlib.StdRandom;
@@ -19,8 +19,8 @@ import com.princeton.edu.stdlib.StdRandom;
 public class MemoryOfEdgeWeightedGraph {
 
     public static void main(String[] args) {
-	Edge e = new Edge(123456, 654321, 1.0);
-	StdOut.println("size of Edge = " + MemoryUtil.memoryUsageOf(e) + " bytes");
+	// Edge e = new Edge(123456, 654321, 1.0);
+	// StdOut.println("size of Edge = " + MemoryUtil.memoryUsageOf(e) + " bytes");
 
 	int n = 40;
 	int[] V = new int[n];
@@ -38,7 +38,7 @@ public class MemoryOfEdgeWeightedGraph {
 		double weight = StdRandom.uniform(0.0, 1.0);
 		G.addEdge(new Edge(v, w, weight));
 	    }
-	    memory[i] = MemoryUtil.deepMemoryUsageOf(G);
+	    // memory[i] = MemoryUtil.deepMemoryUsageOf(G);
 	}
 
 	// build multiple linear regression coefficients
