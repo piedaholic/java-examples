@@ -1,8 +1,10 @@
 package com.datastructs.queue;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.fail;
 
 import java.util.Random;
+
+import com.datastructs.queue.CustomQueue;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -25,7 +27,7 @@ public class CustomQueueTest {
 
     @Before
     public void setUp() throws Exception {
-	queue = new CustomQueue<Integer>();
+        queue = new CustomQueue<Integer>();
     }
 
     @After
@@ -34,37 +36,37 @@ public class CustomQueueTest {
 
     @Test
     public final void testEnqueue() {
-	queue.clear();
-	try {
-	    for (int i = 0; i < array.length; i++) {
-		queue.enqueue(array[i]);
-	    }
-	} catch (Exception e) {
-	    fail("testEnqueue() failed-->" + e);
-	}
-	if (queue.isEmpty())
-	    fail("Queue Empty");
-	if (!queue.peek().equals(array[0]))
-	    fail(queue.peek() + " fetched instead of " + array[array.length - 1]);
-	queue.clear();
+        queue.clear();
+        try {
+            for (int i = 0; i < array.length; i++) {
+                queue.enqueue(array[i]);
+            }
+        } catch (Exception e) {
+            fail("testEnqueue() failed-->" + e);
+        }
+        if (queue.isEmpty())
+            fail("Queue Empty");
+        if (!queue.peek().equals(array[0]))
+            fail(queue.peek() + " fetched instead of " + array[array.length - 1]);
+        queue.clear();
     }
 
     @Test
     public final void testDequeue() {
-	queue.clear();
-	queue.enqueue(random.nextInt());
-	queue.dequeue();
-	if (!queue.isEmpty())
-	    fail("Failed to remove element");
+        queue.clear();
+        queue.enqueue(random.nextInt());
+        queue.dequeue();
+        if (!queue.isEmpty())
+            fail("Failed to remove element");
     }
 
     @Test
     public final void testPeek() {
-	queue.clear();
-	int i = random.nextInt();
-	queue.enqueue(i);
-	if (!queue.peek().equals(i))
-	    fail("Wrong Value Fetched");
+        queue.clear();
+        int i = random.nextInt();
+        queue.enqueue(i);
+        if (!queue.peek().equals(i))
+            fail("Wrong Value Fetched");
     }
 
 }
