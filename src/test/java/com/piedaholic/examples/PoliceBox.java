@@ -11,10 +11,8 @@ public class PoliceBox {
     }
 
     public static void main(String[] time) {
-        // var p = new PoliceBox();
-        // var q = new PoliceBox();
-        PoliceBox p = new PoliceBox();
-        PoliceBox q = new PoliceBox();
+        var p = new PoliceBox();
+        var q = new PoliceBox();
         p.color = "green";
         p.age = 1400;
         p = q;
