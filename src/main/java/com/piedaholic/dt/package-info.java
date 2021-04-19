@@ -1,4 +1,7 @@
-package java.com.piedaholic.dt;
+package com.piedaholic.dt;
+
+// Datatypes supported in Java
+// Primitive vs Wrapper
 
 // @formatter:off // Turns off formatting and the comments indentation would be preserved
 // Also adding - after /* in multiline comments would preserve the identation

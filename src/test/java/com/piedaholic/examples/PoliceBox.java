@@ -5,7 +5,22 @@ public class PoliceBox {
     String color;
     long age;
 
+    // var name; // Cannot be used as a class variable
+
+    // public PoliceBox(var name) {
+    // }
+    // var cannot be used as a constructor parameter
+
+    // public void PoliceBox_1(var name) {
+    // }
+    // var cannot be used as a method parameter
+
     public void PoliceBox() {
+        color = "blue";
+        age = 1200;
+    }
+
+    public void PoliceBox(int name) {
         color = "blue";
         age = 1200;
     }
