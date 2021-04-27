@@ -150,3 +150,28 @@ _ (underscore)
 ** true/false/null are not actually reserved words, but literal values. 
 Since they cannot be used as identifier names, we include them in this table.
 */
+
+//@formatter:off
+/*
+Wrapper class 	Converting String to a primitive 	Converting String to a wrapper class
+Boolean 	      Boolean.parseBoolean("true") 	    Boolean.valueOf("TRUE")
+Byte 	          Byte.parseByte("1") 	            Byte.valueOf("2")
+Short 	        Short.parseShort("1") 	          Short.valueOf("2")
+Integer 	      Integer.parseInt("1") 	          Integer.valueOf("2")
+Long 	          Long.parseLong("1") 	            Long.valueOf("2")
+Float 	        Float.parseFloat("1") 	          Float.valueOf("2.2")
+Double 	        Double.parseDouble("1") 	        Double.valueOf("2.2")
+Character 	    None 	                            None
+*/
+
+/*-
+Primitive type 	Wrapper class 	Example of creating
+boolean 	      Boolean 	      Boolean.valueOf(true)
+byte 	          Byte 	          Byte.valueOf((byte) 1)
+short 	        Short 	        Short.valueOf((short) 1)
+int 	          Integer 	      Integer.valueOf(1)
+long 	          Long 	          Long.valueOf(1)
+float 	        Float 	        Float.valueOf((float) 1.0)
+double 	        Double 	        Double.valueOf(1.0)
+char 	          Character 	    Character.valueOf('c')
+*/

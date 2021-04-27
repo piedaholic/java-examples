@@ -23,6 +23,7 @@ public class StringBuilderExamples {
         StringBuilder sb = new StringBuilder("piedaholic");
         System.out.println(str == sb.toString());
         System.out.println(str.equals(sb.toString()));
+        // Cannot use equivalence operator on String with StringBuilder
     }
 
 }
