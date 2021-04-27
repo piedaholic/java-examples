@@ -1,3 +1,3 @@
 # Java explained using examples
-# Current JDK version is 1.8
-# Will move the repository to Java 11
+## Java version of this branch is 11
+## Java version of master repository is currently 1.8
