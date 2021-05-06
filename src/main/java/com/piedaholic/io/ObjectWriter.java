@@ -25,4 +25,12 @@ new BufferedOutputStream(new FileOutputStream(f))
         }
     }    
 }
+
+public static <T> void writeObject(T obj, File f) throws IOException {
+        try (var out = new ObjectOutputStream(
+new BufferedOutputStream(new FileOutputStream(f))
+        )){
+         out.writeObject(obj);
+    }
+}    
 }
