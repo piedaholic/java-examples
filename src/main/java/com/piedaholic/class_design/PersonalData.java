@@ -1,10 +1,12 @@
 package com.piedaholic.class_design;
 
-public class PersonalData {
+import java.io.Serializable;
+
+public class PersonalData implements Serializable {
 
     private String name;
     private Integer age;
-    private String sex;
+    public String sex;
     private String identifier;
     private String identifierType;
     private String addressLine1;
@@ -18,14 +20,18 @@ public class PersonalData {
     public PersonalData() {
     }
 
+    // Only accessible within this class
+    /*-
     private PersonalData(String name, Integer age, String sex, String identifier, String identifierType) {
         this.name = name;
         this.age = age;
         this.sex = sex;
         this.identifier = identifier;
         this.identifierType = identifierType;
-    } // Only accessible within this class
+    }
+    */
 
+    // Only accessible within this package
     protected PersonalData(String name, Integer age, String sex, String identifier, String identifierType,
             String country, String zipCode) {
         this.name = name;
@@ -35,7 +41,19 @@ public class PersonalData {
         this.identifierType = identifierType;
         this.country = country;
         this.zipCode = zipCode;
-    } // Only accessible within this package
+    }
+
+    public PersonalData(String name, Integer age, String sex, String identifier, String identifierType, String country,
+            String province, String zipCode) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.identifier = identifier;
+        this.identifierType = identifierType;
+        this.country = country;
+        this.province = province;
+        this.zipCode = zipCode;
+    }
 
     public String getName() {
         return this.name;
@@ -131,6 +149,20 @@ public class PersonalData {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name : " + this.name + "\n");
+        sb.append("Age : " + this.age + "\n");
+        sb.append("Sex : " + this.sex + "\n");
+        sb.append("Identifier : " + this.identifier + "\n");
+        sb.append("Identifier Type : " + this.identifierType + "\n");
+        sb.append("Country : " + this.country + "\n");
+        sb.append("Province : " + this.province + "\n");
+        sb.append("Zip Code : " + this.zipCode + "\n");
+        return sb.toString();
     }
 
 }
