@@ -1,5 +1,7 @@
 package com.piedaholic.examples;
 
+import java.util.List;
+import java.util.ListIterator;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -19,16 +21,18 @@ public class Fp {
      cons.accept(isStringBlank("")); // true
      cons.accept(isStringBlank("\t\n\r"));// true
      //cons.accept(isStringBlank(null));// Throws NullPointerException
-     cons.accept(makeSentence("Hi", "I", "Harsh"));
+     cons.accept(makeSentence("Hello,", "I", "am", "Harsh"));
      
     }
 
+    // Predicate Example
     public static boolean isStringEmpty(final String str){
     //Predicate<String> p = String::isEmpty;
     Predicate<String> p = (x) -> x.isEmpty();
     return p.test(str);
     }
-
+    
+    // Predicate Example
     //Checks if a String is whitespace, empty ("") or null.
     public static boolean isStringBlank(final String str){
         //Predicate<String> p = String::isEmpty;
@@ -42,6 +46,7 @@ public class Fp {
      return p.test(str1, str2);
     }
 
+    // Functional Interface Example
     public static String makeSentence(String str1, String str2, String str3){
         TriFunction<String,String,String, String> tri = (x,y,z) -> {
             String result = x;
@@ -56,6 +61,21 @@ public class Fp {
           };
      return tri.apply(str1, str2, str3);
     }
-    
-    
-}
+
+    public static String makeSentence(String...args){
+        List<String> list = List.of(args);
+        char sentenceDelimiter = ' ';
+        char endOfSentenceMarker = '.';
+        StringBuilder sb = new StringBuilder();
+        ListIterator<String> li = list.listIterator();
+        while (li.hasNext()){
+            sb.append(li.next());
+            if (li.hasNext()){
+               sb.append(sentenceDelimiter); 
+            }
+        }
+        sb.append(endOfSentenceMarker);
+        return sb.toString();
+        }
+    }
+
