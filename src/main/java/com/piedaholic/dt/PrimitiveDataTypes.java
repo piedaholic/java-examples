@@ -10,7 +10,7 @@ public class PrimitiveDataTypes {
     }
 
     public static void boolean_dt_examples() {
-        boolean bool;
+        // boolean bool;
     }
 
     public static void short_dt_examples() {
@@ -42,7 +42,7 @@ public class PrimitiveDataTypes {
         num = 0xE;
         System.out.println(num);
         // num = 1.0; // Cannot be initialized with a float value
-        int capybara = 2, mouse, beaver = -1; // Multiple assignments
+        // int capybara = 2, mouse, beaver = -1; // Multiple assignments
         // System.out.println(mouse);
         int value = Integer.MAX_VALUE - 1;
         for (int i = 0; i < 4; i++, value++) {
@@ -52,7 +52,7 @@ public class PrimitiveDataTypes {
 
     public static void long_dt_examples() {
         // long max = 3123456789; // DOES NOT COMPILE
-        long max = 3123456789L;
+        // long max = 3123456789L; // COMPILES
     }
 
     public static void char_dt_examples() {
@@ -65,8 +65,8 @@ public class PrimitiveDataTypes {
         // double notAtStart = _1000.00; // DOES NOT COMPILE
         // double notAtEnd = 1000.00_; // DOES NOT COMPILE
         // double notByDecimal = 1000_.00; // DOES NOT COMPILE
-        double annoyingButLegal = 1_00_0.0_0; // Ugly, but compiles
-        double reallyUgly = 1__________2; // Also compiles
+        // double annoyingButLegal = 1_00_0.0_0; // Ugly, but compiles
+        // double reallyUgly = 1__________2; // Also compiles
 
     }
 

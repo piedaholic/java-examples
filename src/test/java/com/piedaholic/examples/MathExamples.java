@@ -14,6 +14,7 @@ public class MathExamples {
         // The round() method returns an int when called with a float.
         // The round() method returns a long when called with a double.
         int int_num = Math.round(1);
+        System.out.println(int_num);
         int_num = Math.round(1.2f);
         // int_num = Math.round(1.2); // DOES NOT COMPILE // long returned
     }

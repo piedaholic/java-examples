@@ -1,7 +1,5 @@
 package com.piedaholic.examples;
 
-import java.util.ArrayList;
-
 public class StringExamples {
 
     public static final String str = "Hello World! I am Harsh Prakash Singh.";

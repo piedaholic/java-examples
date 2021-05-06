@@ -5,4 +5,4 @@
  * @author hpsingh
  *
  */
-package com.mathematics;
+package com.piedaholic.mathematics;

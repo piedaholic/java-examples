@@ -1,13 +1,12 @@
 package com.piedaholic.concurrency;
 
-import java.time.LocalTime;
 import java.time.ZonedDateTime;
 
 public class Runner {
     public static void main(String... args) {
-        // print_num_1_10();
-        // test_Runnable();
-        // test_Runnable_using_Thread();
+        print_num_1_10();
+        test_Runnable();
+        test_Runnable_using_Thread();
         runMultithread();
         startMultithread();
         try {

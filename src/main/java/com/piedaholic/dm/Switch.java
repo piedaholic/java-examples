@@ -7,9 +7,9 @@ public class Switch {
 
     void feedAnimals() {
         final int bananas = 1;
-        int apples = 2;
+        // int apples = 2; // COMPILES
         int numberOfAnimals = 3;
-        final int cookies = getCookies();
+        // final int cookies = getCookies();
         switch (numberOfAnimals) {
         case bananas:
             System.out.println(bananas);
