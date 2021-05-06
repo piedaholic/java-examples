@@ -1,4 +1,4 @@
-package com.algorithms.trees.princeton;
+package com.piedaholic.algorithms.trees.princeton;
 
 import com.princeton.edu.stdlib.In;
 import com.princeton.edu.stdlib.StdOut;

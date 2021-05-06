@@ -1,5 +1,5 @@
 
-package com.algorithms.trees.princeton;
+package com.piedaholic.algorithms.trees.princeton;
 /******************************************************************************
  *  Compilation:  javac -cp .:jama.jar:classmexer.jar MemoryOfEdgeWeightedGraph.java
  *  Execution:    java  -cp .:jama.jar:classmexer.jar -XX:-UseCompressedOops -javaagent:classmexer.jar MemoryOfEdgeWeightedGraph

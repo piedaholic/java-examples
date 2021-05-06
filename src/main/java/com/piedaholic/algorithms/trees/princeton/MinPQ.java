@@ -1,4 +1,4 @@
-package com.algorithms.trees.princeton;
+package com.piedaholic.algorithms.trees.princeton;
 /******************************************************************************
  *  Compilation:  javac MinPQ.java
  *  Execution:    java MinPQ < input.txt

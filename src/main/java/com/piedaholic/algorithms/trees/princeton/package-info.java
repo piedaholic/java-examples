@@ -5,4 +5,4 @@
  * @author hpsingh
  *
  */
-package com.algorithms.trees.princeton;
+package com.piedaholic.algorithms.trees.princeton;
