@@ -17,7 +17,7 @@ public class PersonalData implements Serializable {
     private String province;
     private String country;
 
-    public PersonalData() {
+    private PersonalData() {
     }
 
     // Only accessible within this class
@@ -149,6 +149,11 @@ public class PersonalData implements Serializable {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    // Creates a new instance of the class and returns the reference
+    public static PersonalData getInstance(){
+        return new PersonalData();
     }
 
     @Override
