@@ -25,6 +25,9 @@ public class Runner {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println("Before...");
+        try(var out = System.out){}
+        System.out.println("After..."); // Not printed // Stream closed
     }
 
     public static void test_PersonalData() {
