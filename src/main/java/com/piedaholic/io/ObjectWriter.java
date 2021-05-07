@@ -8,29 +8,23 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.List;
 
-
 public class ObjectWriter {
 
     public static <T> void writeObject(List<? extends Serializable> list, File f) throws IOException {
-        if (list.isEmpty()){
+        if (list.isEmpty()) {
             return;
-        }
-        else {
-            try (var out = new ObjectOutputStream(
-new BufferedOutputStream(new FileOutputStream(f))
-            )){
-            for (Object obj : list) {
-             out.writeObject(obj);
+        } else {
+            try (var out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)))) {
+                for (Object obj : list) {
+                    out.writeObject(obj);
+                }
             }
         }
-    }    
-}
-
-public static <T> void writeObject(T obj, File f) throws IOException {
-        try (var out = new ObjectOutputStream(
-new BufferedOutputStream(new FileOutputStream(f))
-        )){
-         out.writeObject(obj);
     }
-}    
+
+    public static <T> void writeObject(T obj, File f) throws IOException {
+        try (var out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(f)))) {
+            out.writeObject(obj);
+        }
+    }
 }

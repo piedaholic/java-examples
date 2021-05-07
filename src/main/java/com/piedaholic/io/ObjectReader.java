@@ -11,18 +11,16 @@ import java.util.List;
 
 public class ObjectReader {
 
-    public static List<Object> readObject(File f ) throws IOException, ClassNotFoundException {
+    public static List<Object> readObject(File f) throws IOException, ClassNotFoundException {
         var objList = new ArrayList<Object>();
-        try (
-            ObjectInputStream oi = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)))
-        ){
-               while (true) {
-                   Object obj = oi.readObject();
-                   objList.add(obj);
-               }
+        try (ObjectInputStream oi = new ObjectInputStream(new BufferedInputStream(new FileInputStream(f)))) {
+            while (true) {
+                Object obj = oi.readObject();
+                objList.add(obj);
+            }
+        } catch (EOFException e) {
         }
-        catch(EOFException e){}
         return objList;
     }
-    
+
 }
