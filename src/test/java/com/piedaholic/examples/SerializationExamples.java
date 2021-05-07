@@ -29,11 +29,11 @@ class E implements Serializable {
     private int id = 2;
 }
 
-class F  {
+class F {
     private int id = 3;
 }
 
-class G implements Serializable{
+class G implements Serializable {
     private H h;
 }
 
@@ -41,7 +41,44 @@ class H {
     private int id;
 }
 
+class I implements Serializable {
+
+    public static void main(String... args) {
+        J j = new I().new J();
+        try {
+            ObjectWriter.writeObject(j, new File("E:\\Harsh.txt"));
+            System.out.println("Object Written Successfully");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    class J implements Serializable {
+        private K k = new K();
+    }
+
+    class K implements Serializable {
+        private transient L l = new L();
+    }
+
+    class L {
+
+    }
+
+}
+
 public class SerializationExamples {
+
+    class M implements Serializable {
+        private N n = new N();
+    }
+
+    class N implements Serializable {
+        private transient O o = new O();
+    }
+
+    class O {
+    }
 
     public static void main(String... args) {
         A a = new A();
@@ -64,6 +101,17 @@ public class SerializationExamples {
             System.out.println("Object Written Successfully");
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        I.main();
+
+        M m = new SerializationExamples().new M();
+        try {
+            ObjectWriter.writeObject(m, new File("E:\\Harsh.txt"));
+            System.out.println("Object Written Successfully");
+        } catch (IOException e) {
+            e.printStackTrace(); // Will throw java.io.NotSerializableException as SerializationExamples does not implement Serializable
+            // Outer class must implement Serializable for inner classes to be serializable
         }
     }
 }
