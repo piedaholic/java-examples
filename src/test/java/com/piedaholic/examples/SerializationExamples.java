@@ -86,19 +86,21 @@ public class SerializationExamples {
             ObjectWriter.writeObject(a, new File("E:\\Harsh.txt"));
             System.out.println("Object Written Successfully");
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); // Class C is not serializable // Also if C is not
+            // marked as serializable private member instance of class C in class B could 
+            // be marked as transient
         }
         D d = new D();
         try {
             ObjectWriter.writeObject(d, new File("E:\\Harsh.txt"));
-            System.out.println("Object Written Successfully");
+            System.out.println("Object Written Successfully"); // Writes Successfully
         } catch (IOException e) {
             e.printStackTrace();
         }
         G g = new G();
         try {
             ObjectWriter.writeObject(g, new File("E:\\Harsh.txt"));
-            System.out.println("Object Written Successfully");
+            System.out.println("Object Written Successfully"); // Writes Successfully
         } catch (IOException e) {
             e.printStackTrace();
         }
