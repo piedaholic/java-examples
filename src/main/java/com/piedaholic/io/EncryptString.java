@@ -8,25 +8,7 @@ public class EncryptString {
     private static String string;
     private static char[] secretKey;
     private static String encryptionAlgo;
-    /*-
-        The AES algorithm is an iterative, symmetric-key block cipher that supports 
-        cryptographic keys (secret keys) of 128, 192, and 256 bits to encrypt and decrypt data in blocks of 128 bits.
-        If the data to be encrypted does not meet the block size of 128 bits requirement, it must be padded. 
-        Padding is a process of filling up the last block to 128 bits.
-        
-        The AES algorithm has six modes of operation:
     
-            ECB (Electronic Code Book)
-            CBC (Cipher Block Chaining)
-            CFB (Cipher FeedBack)
-            OFB (Output FeedBack)
-            CTR (Counter)
-            GCM (Galois/Counter Mode)
-    
-        The mode of operation may be applied in order to strengthen the effect of the encryption algorithm. 
-        Moreover, the mode of operation may convert the block cipher into a stream cipher. 
-        Each mode has its strength and weakness. 
-    */
     // private static List<String> aesEncryptionAlgoList =
     // List.of("ECB","CBC","CFB","OFB","CTR","GCM");
     // Console console = new Console(); // DOES NOT COMPILE
