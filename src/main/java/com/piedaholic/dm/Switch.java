@@ -21,7 +21,7 @@ public class Switch {
         // of a case statement, even if one of the values is stored in a final variable
         case 3 * 5:
             System.out.println("Hello!");
-            break;
+            //break;
         default:
             System.out.println("Hello World!");
             break;
