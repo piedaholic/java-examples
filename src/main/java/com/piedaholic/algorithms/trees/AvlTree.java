@@ -39,10 +39,11 @@ public class AvlTree<T extends Comparable> {
     }
 
     private Node<T> insert(Node<T> node, T data) {
-        int cmp;
+        //int cmp;
         if (node == null)
             return new Node<>(data);
-        cmp = node.data.compareTo(data);
+        @SuppressWarnings("unchecked")
+        int cmp = node.data.compareTo(data);
         if (cmp < 0)
             node.right = insert(node.right, data);
         else if (cmp > 0)
@@ -56,14 +57,14 @@ public class AvlTree<T extends Comparable> {
         int balance = getBalance(node);
         if (balance > 1) {
             if (height(node.right.right) > height(node.right.left))
-                rotateLeft(node);
+                node = rotateLeft(node);
             else {
                 node.right = rotateRight(node.right);
                 node = rotateLeft(node);
             }
         } else if (balance < -1) {
             if (height(node.left.left) > height(node.left.right))
-                rotateRight(node);
+                node = rotateRight(node);
             else {
                 node.left = rotateLeft(node.left);
                 node = rotateRight(node);
