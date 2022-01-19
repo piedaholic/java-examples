@@ -3,6 +3,7 @@ package com.piedaholic.examples;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.function.BiPredicate;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import com.piedaholic.fp.TriFunction;
@@ -23,6 +24,9 @@ public class Fp {
      //cons.accept(isStringBlank(null));// Throws NullPointerException
      cons.accept(makeSentence("Hello,", "I", "am", "Harsh"));
      
+
+     BinaryOperator<String> up = String::concat;
+     String s1 = up.apply("SREE", "MMM");
     }
 
     // Predicate Example
