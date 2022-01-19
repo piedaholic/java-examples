@@ -1,5 +1,7 @@
 package com.piedaholic.ds;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListExamples {
@@ -28,5 +30,38 @@ public class ListExamples {
         List chimpanzees = new ArrayList<Integer>();
         for (var ham : chimpanzees)
             System.out.println(ham);
+    }
+
+    public void traverse_list_1(List<?> list) {
+        int index = 0;
+        for (var o : list) {
+            System.out.println(o);
+            assert o.equals(list.get(index));
+            index++;
+        }
+        assert list.size() == index + 1;
+    }
+
+    public void traverse_list_2(List<?> list) {
+        for (int index = 0; index < list.size(); index++) {
+            System.out.println(list.get(index));
+        }
+    }
+
+    public void traverse_list_3(List<?> list) {
+        Iterator<?> itr = list.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+    }
+
+    public void traverse_list_4(List<?> list) {
+        list.forEach(item -> System.out.println(item));
+    }
+
+    public void list_To_Array(List<?> list){
+       for (var item : list.toArray()){
+           System.out.println(item);
+       }
     }
 }
