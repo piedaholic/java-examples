@@ -1,4 +1,4 @@
-package com.piedaholic.class_design;
+package com.piedaholic.oops.designs;
 
 public interface InterfaceA {
     int MAX = 1; // final, static and public keywords are implicit

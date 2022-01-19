@@ -1,4 +1,4 @@
-package com.piedaholic.class_design.interest;
+package com.piedaholic.oops.designs;
 
 public interface InterestCalc {
 

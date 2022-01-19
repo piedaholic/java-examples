@@ -1,4 +1,4 @@
-package com.piedaholic.class_design.abstraction;
+package com.piedaholic.oops.designs;
 
 public abstract class AbstractA {
 
