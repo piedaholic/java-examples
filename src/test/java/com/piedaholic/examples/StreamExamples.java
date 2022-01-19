@@ -1,8 +1,11 @@
 package com.piedaholic.examples;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
+
+import com.piedaholic.models.Employee;
 
 public class StreamExamples {
 
@@ -38,6 +41,10 @@ public class StreamExamples {
         Stream<Integer> oddNumbers = Stream.iterate(1, n -> n + 2).limit(10);
         oddNumbers.forEach((x)->System.out.print(x + " "));
         Stream.iterate(9, n->(n<101) , n->n+2).forEach((x)->System.out.print(x + " "));
+        List<Employee> list = new ArrayList<>();
+        list.add(new Employee("1","HPS",100));
+        list.add(new Employee("2","HPS",200));
+        System.out.println("Average:" +list.stream().filter(k->k.getSalary()>0).mapToLong(k->k.getSalary()).average());
     }
 
     public static void create_parallel_streams(){
@@ -45,5 +52,6 @@ public class StreamExamples {
         var intStream = int_list.parallelStream();
         intStream.filter((x)->x>1).forEach((x)->System.out.print(x + " "));
     }
+  
     
 }
