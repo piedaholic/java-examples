@@ -9,9 +9,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.piedaholic.class_design.ClassA;
-import com.piedaholic.class_design.PersonalData;
-import com.piedaholic.class_design.UserCredentials;
+import com.piedaholic.models.PersonalData;
+import com.piedaholic.models.UserCredentials;
 
 public class Runner {
 
@@ -76,8 +75,8 @@ public class Runner {
     }
 
     public static void test_ClassA() throws IOException {
-        ClassA ref = new ClassA(1, "piedaholic");
-        ObjectWriter.writeObject(ref, new File(parentDir, "demo.txt"));
+        //ClassA ref = new ClassA(1, "piedaholic");
+        //ObjectWriter.writeObject(ref, new File(parentDir, "demo.txt"));
     }
 
 }
