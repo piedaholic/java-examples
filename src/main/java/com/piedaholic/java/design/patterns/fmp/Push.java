@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.piedaholic.design_patterns.fmp;
+package com.piedaholic.java.design.patterns.fmp;
 
 /**
  * @author HPSINGH

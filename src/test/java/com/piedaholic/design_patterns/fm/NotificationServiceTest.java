@@ -3,11 +3,9 @@
  */
 package com.piedaholic.design_patterns.fm;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
-import com.piedaholic.design_patterns.fmp.NotificationService;
+import com.piedaholic.java.design.patterns.fmp.NotificationService;
 
 /**
  * @author HPSINGH

@@ -1,4 +1,4 @@
-package com.piedaholic.design_patterns.fmp;
+package com.piedaholic.java.design.patterns.fmp;
 
 public class NotificationFactory {
 

@@ -1,4 +1,4 @@
-package com.piedaholic.design_patterns.singleton.eager;
+package com.piedaholic.java.design.patterns.singleton.eager;
 
 public class Singleton {
 	private final static Singleton instance = new Singleton();

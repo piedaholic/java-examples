@@ -1,8 +1,8 @@
-package com.piedaholic.design_patterns.singleton.optimal;
+package com.piedaholic.java.design.patterns.singleton.optimal;
 
 /**
  * 
- * @author HPSINGH This approach doesn’t require synchronization, is thread
+ * @author HPSINGH This approach doesn't require synchronization, is thread
  *         safe, enforces lazy initialization and has comparatively less
  *         boilerplate.
  */

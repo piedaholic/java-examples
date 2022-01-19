@@ -1,4 +1,4 @@
-package com.piedaholic.design_patterns.singleton.dcl;
+package com.piedaholic.java.design.patterns.singleton.dcl;
 
 public class Singleton {
 
