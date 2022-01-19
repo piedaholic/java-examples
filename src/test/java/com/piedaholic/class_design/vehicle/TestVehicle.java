@@ -4,9 +4,4 @@ import org.junit.Test;
 
 public class TestVehicle {
 
-    @Test
-    void createCar() {
-
-    }
-
 }

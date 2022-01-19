@@ -8,19 +8,21 @@ import java.util.stream.IntStream;
 
 import org.junit.Test;
 
+import com.piedaholic.objects.ObjectCount;
+
 public class TestClassB {
 
     @Test
     public void givenMultiThread_whenStaticSyncMethod() {
         ExecutorService es = Executors.newCachedThreadPool();
         final String className  =  "com.piedaholic.class_design.ClassA";
-        ClassB classB = new ClassB();
+        new ObjectCount();
         // System.out.println(LocalDateTime.now().toString());
         IntStream.range(0, 100).forEach(count -> es.submit(() -> {
-            System.out.println( Thread.currentThread()+ " " + /*hash +*/ " " + classB.entityCountMap.get(className));
-            final Object obj = classB.init(className);
-            int hash = System.identityHashCode(obj);
-            System.out.println( Thread.currentThread()+ " " + /*hash +*/ " " + classB.entityCountMap.get(className));
+            System.out.println( Thread.currentThread()+ " " + /*hash +*/ " " + ObjectCount.entityCountMap.get(className));
+            final Object obj = ObjectCount.init(className);
+            System.identityHashCode(obj);
+            System.out.println( Thread.currentThread()+ " " + /*hash +*/ " " + ObjectCount.entityCountMap.get(className));
         }
         ));
         try {
@@ -35,10 +37,9 @@ public class TestClassB {
     public void givenSingleThread_whenStaticSyncMethod() {
         ExecutorService es = Executors.newSingleThreadExecutor();
         final String className  =  "com.piedaholic.class_design.ClassA";
-        ClassB classB = new ClassB();
         IntStream.range(0, 100).forEach(count -> es.submit(() -> {
-            classB.init(className);
-            System.out.println(classB.entityCountMap.get(className));
+            ObjectCount.init(className);
+            System.out.println(ObjectCount.entityCountMap.get(className));
         }
         ));
         try {
