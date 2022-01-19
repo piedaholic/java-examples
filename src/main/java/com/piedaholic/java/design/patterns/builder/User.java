@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.piedaholic.design_patterns.builder;
+package com.piedaholic.java.design.patterns.builder;
 
 import java.util.Date;
 
