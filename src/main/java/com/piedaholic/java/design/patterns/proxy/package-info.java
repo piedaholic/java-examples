@@ -1,0 +1,1 @@
+package com.piedaholic.java.design.patterns.proxy;

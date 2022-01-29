@@ -9,7 +9,7 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import com.piedaholic.ds.linear.queue.CustomQueue;
+import com.piedaholic.ds.linear.CustomQueue;
 
 public class TestCustomQueue {
     private CustomQueue<Integer> queue;

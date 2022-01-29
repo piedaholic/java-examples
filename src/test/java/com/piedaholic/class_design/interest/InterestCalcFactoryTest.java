@@ -10,9 +10,9 @@ import java.math.RoundingMode;
 
 import org.junit.Test;
 
-import com.piedaholic.oops.designs.CompoundInterest;
-import com.piedaholic.oops.designs.InterestCalc;
-import com.piedaholic.oops.designs.InterestCalcFactory;
+import com.piedaholic.oops.designs.abstraction.examples.interest.CompoundInterest;
+import com.piedaholic.oops.designs.abstraction.examples.interest.InterestCalc;
+import com.piedaholic.oops.designs.abstraction.examples.interest.InterestCalcFactory;
 
 /**
  * @author HPSINGH

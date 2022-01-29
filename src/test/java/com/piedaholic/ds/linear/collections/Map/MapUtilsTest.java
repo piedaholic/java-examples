@@ -11,6 +11,7 @@ import java.util.Random;
 
 import org.junit.Test;
 
+import com.piedaholic.ds.linear.MapUtils;
 import com.piedaholic.models.Employee;
 
 /**
@@ -21,7 +22,7 @@ public class MapUtilsTest {
 
 	/**
 	 * Test method for
-	 * {@link com.piedaholic.ds.linear.collections.Map.MapUtils#sortByValue(java.util.Map)}.
+	 * {@link MapUtils#sortByValue(java.util.Map)}.
 	 */
 
 	@Test

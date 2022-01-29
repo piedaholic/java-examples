@@ -17,5 +17,9 @@ public interface InterfaceA {
     static String funcB() {
         return "Hello World!";
     } // public is implicit
+    
+    default void funcC() {
+    	System.out.println("InterfaceA::funcC");
+    }
 
 }

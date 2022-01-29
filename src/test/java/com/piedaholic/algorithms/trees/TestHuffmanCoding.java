@@ -3,7 +3,7 @@ package com.piedaholic.algorithms.trees;
 import static org.junit.Assert.assertTrue;
 
 import com.piedaholic.algorithms.trees.HuffmanCoding.Node;
-import com.piedaholic.ds.linear.tuple.Tuple;
+import com.piedaholic.ds.linear.Tuple;
 
 import org.junit.Test;
 

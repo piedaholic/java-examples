@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-import com.piedaholic.ds.linear.tuple.Tuple;
+import com.piedaholic.ds.linear.Tuple;
 
 public class HuffmanCoding {
     public class Node {
