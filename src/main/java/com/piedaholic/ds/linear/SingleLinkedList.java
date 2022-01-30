@@ -1,6 +1,6 @@
 package com.piedaholic.ds.linear;
 
-public class SingleLinkedList<T extends Comparable> {
+public class SingleLinkedList<T extends Comparable<? super T>> {
     private Node<T> head;
     private Node<T> tail;
     private int size = 0;
@@ -38,10 +38,11 @@ public class SingleLinkedList<T extends Comparable> {
                 this.head = new Node<>(data);
                 this.tail = head;
                 size++;
-            } else return false;
+            } else
+                return false;
         } else {
 
-            for (Node<T> node = this.head, prevNode = null; node != null; ) {
+            for (Node<T> node = this.head, prevNode = null; node != null;) {
                 if (ctr == index) {
                     Node<T> newNode = new Node<>(data);
                     if (prevNode != null)
@@ -84,7 +85,7 @@ public class SingleLinkedList<T extends Comparable> {
             return -1;
         else {
             int ctr = 0;
-            for (Node<T> node = this.head; node != null; ) {
+            for (Node<T> node = this.head; node != null;) {
                 if (node.data.compareTo(data) == 0)
                     return ctr;
                 ctr++;
@@ -98,11 +99,9 @@ public class SingleLinkedList<T extends Comparable> {
         if (this.head == null && this.tail == null)
             return false;
         else {
-            int ctr = 0;
-            for (Node<T> node = this.head; node != null; ) {
+            for (Node<T> node = this.head; node != null;) {
                 if (node.data.compareTo(data) == 0)
                     return true;
-                ctr++;
                 node = node.next;
             }
         }
@@ -129,7 +128,7 @@ public class SingleLinkedList<T extends Comparable> {
         SingleLinkedList<T> ll = new SingleLinkedList<>();
         ll.add(this.head.data);
         ll.size = this.size;
-        for (Node<T> node = this.head.next; node != null; ) {
+        for (Node<T> node = this.head.next; node != null;) {
             Node<T> newNode = new Node<>(node.data);
             newNode.next = ll.head;
             ll.head = newNode;
@@ -139,7 +138,7 @@ public class SingleLinkedList<T extends Comparable> {
     }
 
     public void clear() {
-        for (Node<T> node = this.head; node != null; ) {
+        for (Node<T> node = this.head; node != null;) {
             Node<T> tmp = node.next;
             node.data = null;
             node.next = null;
@@ -148,7 +147,7 @@ public class SingleLinkedList<T extends Comparable> {
     }
 
     public void print() {
-        for (Node<T> node = this.head; node != null; ) {
+        for (Node<T> node = this.head; node != null;) {
             System.out.println(node.data);
             node = node.next;
         }

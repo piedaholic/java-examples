@@ -13,8 +13,11 @@ public class ListImpl<T> extends AbstractList<T>
 		 * Java also implements List in its list implementations for documentation
 		 * purposes probably. This is totally redundant.
 		 */
-		implements List<T>
-//Redundant Part Ends
+		// implements List<T>
+		/*-
+		Redundant superinterface List<T> for the type ListImpl<T>, already defined by AbstractList<T>
+		*/
+		//Redundant Part Ends
 {
 
 	@Override

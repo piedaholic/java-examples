@@ -1,9 +1,9 @@
 package com.piedaholic.ds.nonlinear.tree;
 
-public class AvlTree<T extends Comparable> {
+public class AvlTree<T extends Comparable<? super T>> {
     Node<T> root;
 
-    class Node<T> {
+    public static class Node<T> {
         Node(T data) {
             this.data = data;
         }
@@ -26,11 +26,11 @@ public class AvlTree<T extends Comparable> {
         return node == null ? -1 : node.height;
     }
 
-    private void insert(T data) {
+    public void insert(T data) {
         this.root = insert(this.root, data);
     }
 
-    private void inOrderTraversal(Node<T> node) {
+    public void inOrderTraversal(Node<T> node) {
         if (node != null) {
             inOrderTraversal(node.left);
             System.out.print(node.data + " ");
@@ -39,10 +39,9 @@ public class AvlTree<T extends Comparable> {
     }
 
     private Node<T> insert(Node<T> node, T data) {
-        //int cmp;
+        // int cmp;
         if (node == null)
             return new Node<>(data);
-        @SuppressWarnings("unchecked")
         int cmp = node.data.compareTo(data);
         if (cmp < 0)
             node.right = insert(node.right, data);

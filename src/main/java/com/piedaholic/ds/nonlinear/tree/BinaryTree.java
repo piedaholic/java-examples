@@ -1,10 +1,17 @@
 package com.piedaholic.ds.nonlinear.tree;
 
-import com.piedaholic.models.BinaryNode;
-
 import java.util.*;
 
 public class BinaryTree<T> {
+
+    public static class Node<T> {
+        public Node(T data) {
+            this.data = data;
+        }
+        private T data;
+        private Node<T> left;
+        private Node<T> right;
+    }
 
     public static void main(String...args) {
         BinaryTree<Integer> tree = new BinaryTree<>();
@@ -15,67 +22,67 @@ public class BinaryTree<T> {
         tree.traverseAndPrint();
     }
 
-    public BinaryNode<T> root;
+    public Node<T> root;
 
     public void insert(T data) {
         if (this.root == null)
-            this.root = new BinaryNode<T>(data);
+            this.root = new Node<T>(data);
         else {
             insert(this.root, data);
         }
     }
 
-    public void insert(BinaryNode<T> node, T data) {
-        Queue<BinaryNode<T>> queue = new LinkedList<>();
-        queue.add(node);
+    public void insert(Node<T> root, T data) {
+        Queue<Node<T>> queue = new LinkedList<>();
+        queue.add(root);
         while (!queue.isEmpty()) {
-            BinaryNode<T> temp = queue.peek();
+            Node<T> temp = queue.peek();
             queue.remove();
 
-            if (node.getLeft() == null) {
-                node.setLeft(new BinaryNode<T>(data));
+            if (temp.left == null) {
+                temp.left = (new Node<T>(data));
                 break;
             } else
-                queue.add(node.getLeft());
+                queue.add(temp.left);
 
-            if (node.getRight() == null) {
-                node.setRight(new BinaryNode<T>(data));
+            if (temp.right == null) {
+                temp.right = (new Node<T>(data));
                 break;
             } else
-                queue.add(node.getRight());
+                queue.add(temp.right);
 
         }
     }
 
-    public boolean compareIfMirrorImage(BinaryNode<T> b1, BinaryNode<T> b2) {
+    public boolean compareIfMirrorImage(Node<T> b1, Node<T> b2) {
         if (b1 == null && b2 == null)
             return true;
         if (b1 == null || b2 == null)
             return false;
-        return b1.getData() == b2.getData() && compareIfMirrorImage(b1.getLeft(), b2.getRight()) && compareIfMirrorImage(b1.getRight(), b2.getLeft());
+        return b1.data == b2.data && compareIfMirrorImage(b1.left, b2.right) && compareIfMirrorImage(b1.right, b2.left);
     }
 
     public List<T> traverse() {
         List<T> li = new ArrayList<>();
-        Queue<BinaryNode<T>> queue = new LinkedList<>();
+        Queue<Node<T>> queue = new LinkedList<>();
         queue.add(this.root);
         while (!queue.isEmpty()) {
-            BinaryNode<T> node = queue.poll();
-            li.add(node.getData());
-            queue.add(node.getLeft());
-            queue.add(node.getRight());
+            Node<T> node = queue.poll();
+            li.add(node.data);
+            queue.add(node.left);
+            queue.add(node.right);
         }
         return li;
     }
 
     private void traverseAndPrint() {
-        Queue<BinaryNode<T>> queue = new LinkedList<>();
+        Queue<Node<T>> queue = new LinkedList<>();
         queue.add(this.root);
         while (!queue.isEmpty()) {
-            BinaryNode<T> node = queue.poll();
-            System.out.print(node.getData() + " ");
-            queue.add(node.getLeft());
-            queue.add(node.getRight());
+            Node<T> node = queue.poll();
+            System.out.print(node.data + " ");
+            queue.add(node.left);
+            queue.add(node.right);
         }
     }
 }

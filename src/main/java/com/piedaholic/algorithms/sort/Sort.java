@@ -1,7 +1,5 @@
 package com.piedaholic.algorithms.sort;
 
-import java.util.Random;
-
 public class Sort {
 
     public static void swap(int[] arr, int idx1, int idx2) {
@@ -137,7 +135,6 @@ public class Sort {
     }
 
     private static void mergeSort(int[] arr, int start, int end) {
-        int len = arr.length;
         if (start == end) return;
         else if (start == end - 1) {
             if (arr[start] > arr[end]) swap(arr, start, end);

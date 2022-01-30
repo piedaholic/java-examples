@@ -12,7 +12,8 @@ public class ClassA extends AbstractA {
 		absA.peek();
 		
 		// static method
-		absA.walk();
+		// absA.walk(); //This will work with WARNINGS
+		ClassA.walk();
 		
 		absA.run();
 	}
