@@ -2,7 +2,7 @@ package com.piedaholic.java.design.patterns.proxy;
 
 import com.piedaholic.annotations.Runner;
 
-@Runner
+
 public class ExpensiveObjectProxy implements ExpensiveObject {
 
 	private static ExpensiveObject object;
@@ -17,7 +17,8 @@ public class ExpensiveObjectProxy implements ExpensiveObject {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	@Runner
+	 public static void main(String[] args) {
 		ExpensiveObject proxy = new ExpensiveObjectProxy();
 		proxy.process();
 		proxy.process(); //heavyConfig() not executed
